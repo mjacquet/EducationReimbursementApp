@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Course Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bachelor level (or higher) program</fullName>
+                <default>false</default>
+                <label>Bachelor level (or higher) program</label>
+            </value>
+            <value>
+                <fullName>Certification or Accreditation</fullName>
+                <default>false</default>
+                <label>Certification or Accreditation</label>
+            </value>
+            <value>
+                <fullName>Diploma</fullName>
+                <default>false</default>
+                <label>Diploma</label>
+            </value>
+            <value>
+                <fullName>Executive Development Program</fullName>
+                <default>false</default>
+                <label>Executive Development Program</label>
+            </value>
+            <value>
+                <fullName>Language Course</fullName>
+                <default>false</default>
+                <label>Language Course</label>
+            </value>
+            <value>
+                <fullName>Professional Association Training</fullName>
+                <default>false</default>
+                <label>Professional Association Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
