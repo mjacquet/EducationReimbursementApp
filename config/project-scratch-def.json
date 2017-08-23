@@ -5,6 +5,5 @@
     "features": "Communities",
     "orgPreferences" : {
         "enabled": ["S1DesktopEnabled","ChatterEnabled","NetworksEnabled"]
-    },
-
+    }
 }
