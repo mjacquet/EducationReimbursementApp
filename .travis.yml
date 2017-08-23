@@ -18,6 +18,7 @@ before_install:
 script:
 - sfdx force:source:convert  -d mdapi
 - zip -r package.zip mdapi
+- git add package.zip
 deploy:
   provider: releases
   api_key:
