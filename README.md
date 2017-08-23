@@ -1,14 +1,4 @@
-# SFDX  App
+[![Build Status](https://travis-ci.org/mjacquet/EducationReimbursementApp.svg?branch=master)](https://travis-ci.org/mjacquet/EducationReimbursementApp)
 
-## Dev, Build and Test
-
-
-## Resources
-
-
-## Description of Files and Directories
-
-
-## Issues
 
 

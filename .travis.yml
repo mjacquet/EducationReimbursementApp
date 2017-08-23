@@ -28,3 +28,6 @@ deploy:
     repo: mjacquet/EducationReimbursementApp
   skip_cleanup: true
   overwrite: true
+branches:
+  only:
+  - master
