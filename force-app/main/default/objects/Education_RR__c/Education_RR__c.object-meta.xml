@@ -53,7 +53,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ReadWrite</externalSharingModel>
-    <gender>Masculine</gender>
     <label>Education Reimbursement Request</label>
     <nameField>
         <displayFormat>ERR-{00000}</displayFormat>
