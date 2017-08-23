@@ -15,10 +15,13 @@ before_install:
 - sfdx update
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid $CONSUMERKEYTARGET --jwtkeyfile assets/server.key
+  --username $USERNAMETARGET  -a targetOrg
 script:
 - sfdx force:source:convert  -d mdapi
 - zip -r package.zip mdapi
 - git add package.zip
+- sfdx force:mdapi:deploy -f package.zip -u $USERNAMETARGET -e true
 deploy:
   provider: releases
   api_key:
