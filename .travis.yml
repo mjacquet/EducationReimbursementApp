@@ -1,0 +1,28 @@
+sudo: true
+dist: trusty
+cache: false
+env:
+- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+before_install:
+- openssl aes-256-cbc -K $encrypted_9617f069c4d7_key -iv $encrypted_9617f069c4d7_iv
+  -in assets/server.key.enc -out assets/server.key -d
+- export SFDX_AUTOUPDATE_DISABLE=true
+- export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
+- export SFDX_DOMAIN_RETRY=300
+- wget -qO- $URL | tar xJf -
+- ./sfdx/install
+- export PATH=./sfdx/$(pwd):$PATH
+- sfdx update
+- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
+  --username $USERNAME --setdefaultdevhubusername -a HubOrg
+script:
+- sfdx force:source:convert  -d mdapi
+- zip -r package.zip mdapi
+deploy:
+  provider: releases
+  api_key:
+    secure: hpI4RPVl7C9sQ/vP747U4GjbalgG8vnKTzF1UibbEGpoVNbTL2IS8rjJQXCUFw2z7ScFb9QbYi59Qdn2mNUBKSWZ5NIbNCh3exImYkoarbVaq9URgwntQ1eSGQ5mawN45em2bteBadGqbZdcrT9C6uN0+mmif8NScNGJeuUnzDc59R0SR++bShJsbPL+19vr/Z8/MA0eU5v/ED31hWeLuNmXM/hvQmLMgupI0ysNjgAZL5LvsbuQpdJ+d7QnzOF2hvivNTRN5wsa7loMHfdefKBJ6PMUj8QociMHS417I87Sb28FW9GkrEns7MsISuZwejteXzrxZtCftkSJGVyZnxAkyKbNOdSAItcwdoPrTs5DcTWvyS7bOgtRmEfDSsgzOgRjDcU4R7DiGbWnsD/egAstaMkFTj70FpbkzVZjIawzDhUIlJS1kAObq5JltgDgz5JsRCR39L5idZX8J9Paz9AVg+f67gbqh5iqG2FiMtxyk/+NgSVtamuchLAoPKQ0N8aiLRkLQhv8/PxSgu+32l29IbSEAeLthnsF21EVbFtwRSQhaL8u7M02imEPrSzzSkjPsW7idkhjmWRdZk2rMYePQZX89PlURRAtQqFS8Edpu2Q6iKoMHGaoJ1hctmvwteHTVoPhDA+tMCE0mjJcw/q3wCHZ0Ttq9EKggkXrtDA=
+  file: package.zip
+  on:
+    repo: mjacquet/EducationReimbursementApp
+  overwrite: true
