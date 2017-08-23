@@ -60,7 +60,19 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Education Reimbursement Requests</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Course_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Provider_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Amount_Requested__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Currency__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date_Completed__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Course_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Provider_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_Completed__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Course_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Provider_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_Completed__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
