@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mjacquet/EducationReimbursementApp.svg?branch=master)](https://travis-ci.org/mjacquet/EducationReimbursementApp)
 
-##Education Reimbursement Sample App for Force.com
+## Education Reimbursement Sample App for Force.com
 
 This App is a sample app you can use as a starting point to create an Education Reimbursmeent Process.
 
@@ -44,6 +44,6 @@ Assign the Permission Set to your user
 sfdx force:user:permset:assign -n Education_Reimbursement_App
 ```
 
-##Contribution
+## Contributions
 We are welcoming contributions to make this a better starting point for the community needs - just send Pull Requests our way!
 
