@@ -6,6 +6,12 @@ This App is a sample app you can use as a starting point to create an Education 
 
 ## Installation
 
+### Package
+
+1) Download package.zip from the latest [release](https://github.com/mjacquet/EducationReimbursementApp/releases/latest)
+
+2) Head over to [Workbench](https://workbench.developerforce.com) -->migration -->deploy to deploy teh package.
+
 ### Salesforce DX - new scratch org
 
 Clone the repo to your local file system.
