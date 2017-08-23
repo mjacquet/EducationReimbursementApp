@@ -26,4 +26,5 @@ deploy:
   file: package.zip
   on:
     repo: mjacquet/EducationReimbursementApp
+  skip_cleanup: true
   overwrite: true
