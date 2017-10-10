@@ -38,7 +38,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Education_Reimbursement_Request_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
@@ -46,7 +50,7 @@
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableChangeDataCapture>false</enableChangeDataCapture>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
@@ -57,6 +61,7 @@
     <nameField>
         <displayFormat>ERR-{00000}</displayFormat>
         <label>Education Reimbursement Request Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Education Reimbursement Requests</pluralLabel>

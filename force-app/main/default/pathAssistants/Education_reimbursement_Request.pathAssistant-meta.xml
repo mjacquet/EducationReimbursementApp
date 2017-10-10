@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Education_RR__c</entityName>
+    <fieldName>Request_Status__c</fieldName>
+    <masterLabel>Education reimbursement Request</masterLabel>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>
