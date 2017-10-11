@@ -50,6 +50,10 @@ Assign the Permission Set to your user
 sfdx force:user:permset:assign -n Education_Reimbursement_App
 ```
 
+Make sure you set a manager on the user record for the approval process to work.
+
+Enable Path ( Setup --> User Interface --> Path Settings --> Enable)
+
 ## Contributions
 We are welcoming contributions to make this a better starting point for the community needs - just send Pull Requests our way!
 
